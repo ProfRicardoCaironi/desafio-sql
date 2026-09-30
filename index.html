@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Desafio SQL | Banco de Dados</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+  <section id="start" class="card hero">
+    <div class="badge">BANCO DE DADOS</div>
+    <h1>DESAFIO <span>SQL</span></h1>
+    <p>40 questões para revisar os comandos SQL estudados.</p>
+    <div class="stats"><div><b>40</b><small>questões</small></div><div><b>1</b><small>ponto por questão</small></div><div><b>3</b><small>níveis de resultado</small></div></div>
+    <div class="name-box">
+      <label for="studentName">Digite seu nome para começar</label>
+      <input id="studentName" type="text" maxlength="50" autocomplete="name" placeholder="Seu nome">
+      <small id="nameError" class="name-error"></small>
+    </div>
+    <button id="startBtn">INICIAR QUIZ</button>
+  </section>
+
+  <section id="quiz" class="card hidden">
+    <header class="quiz-head"><div><small>DESAFIO SQL</small><h2 id="counter">Questão 1 de 40</h2></div><div id="percent">0%</div></header>
+    <div class="progress"><div id="bar"></div></div>
+    <div id="difficulty" class="tag"></div>
+    <pre id="question" class="question"></pre>
+    <div id="options" class="options"></div>
+    <button id="confirmBtn" disabled>CONFIRMAR RESPOSTA</button>
+  </section>
+
+  <section id="result" class="card hidden result">
+    <div id="resultIcon" class="result-icon"></div>
+    <p class="eyebrow">RESULTADO FINAL</p>
+    <p id="studentResultName" class="student-result-name"></p>
+    <h2 id="resultTitle"></h2>
+    <div class="score"><strong id="score"></strong><span>/ 40</span></div>
+    <div id="resultPercent" class="big-percent"></div>
+    <p id="resultMessage"></p>
+    <div class="actions"><button id="reviewBtn">VER MEUS ERROS</button><button id="restartBtn" class="secondary">TENTAR NOVAMENTE</button></div>
+  </section>
+
+  <section id="review" class="hidden">
+    <div class="review-header"><div><p class="eyebrow">REVISÃO</p><h2>Confira seus erros</h2></div><button id="backBtn" class="secondary">VOLTAR AO RESULTADO</button></div>
+    <div id="reviewList"></div>
+  </section>
+</main>
+<script src="questions.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
